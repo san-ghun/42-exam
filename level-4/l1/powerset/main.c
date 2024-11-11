@@ -1,3 +1,5 @@
+// powerset-02.c
+
 #include <unistd.h>
 #include <stdlib.h>
 
