@@ -1,8 +1,8 @@
 # 42-exam
 
-I am `sanghupa`, a student at 42Berlin. This repository is a code base where I store my learnings, including my approachs to exercises and implemented practices.
+I am `sanghupa`, a student at 42Berlin. This repository is a file storage where I store my learnings, including my approachs to exercises and implemented practices.
 
-I store commonly used data structure and algorithms, such as swap and sort, in `/common` and exercises in each category of levels. For each exercises, I try several approachs case by case.
+I store commonly used data structures and algorithms, such as swap and sort, in `/common` and exercises in each category of levels. For each exercise, I try several approachs case by case.
 
 > Warning!
 > Solutions stored in this repository are NOT TESTED on exam and might NOT suit with 42Berlin's regulatory in exam. These are just logs or results of my learning.
