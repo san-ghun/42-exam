@@ -1,5 +1,7 @@
 NAME = permutations
 
+CFLAGS = -Wall -Werror -Wextra -g
+
 SRC_NAME = main.c
 
 RM = rm -f
@@ -13,6 +15,6 @@ fclean:
 re: fclean all
 
 $(NAME):
-	cc -g -o $@ $(SRC_NAME) 
+	cc $(CFLAGS) -o $@ $(SRC_NAME) 
 
 .PHONY: all fclean re 

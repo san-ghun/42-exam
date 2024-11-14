@@ -1,5 +1,7 @@
 NAME = _  # replace NAME
 
+CFLAGS = -Wall -Werror -Wextra -g
+
 SRC_NAME = main.c  # replace main.c
 
 RM = rm -f
@@ -13,6 +15,6 @@ fclean:
 re: fclean all
 
 $(NAME):
-	cc -g -o $@ $(SRC_NAME) 
+	cc $(CFLAGS) -o $@ $(SRC_NAME) 
 
 .PHONY: all fclean re 
