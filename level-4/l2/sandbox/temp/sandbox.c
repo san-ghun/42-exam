@@ -9,7 +9,7 @@ pid_t pid;
 bool kill_failed = false;
 bool killed_child = false;
 
-static void kill_proc(int sig)
+static void kill_p(int sig)
 {
 	(void)sig;
 	if (kill(pid, SIGKILL) == -1)
@@ -31,11 +31,13 @@ int sandbox(void (*f)(void), unsigned int timeout, bool verbose)
 		f();
 		_exit(0);
 	}
-	sa.sa_handler = kill_proc;
+
+	sa.sa_handler = kill_p;
 	sa.sa_flags = SA_RESTART;
 	if (sigaction(SIGALRM, &sa, NULL))
 		return -1;
 	alarm(timeout);
+
 	pid_t wresult = waitpid(pid, &status, WUNTRACED);
 	if (wresult < 0)
 		return -1;
